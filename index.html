@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sugar Saints Cookie Company — Handcrafted Cookies</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <meta name="description" content="Sugar Saints Cookie Company — Handcrafted cookies by a busy mom. Small-batch, made with care.">
+  <style>
+    :root{
+      --cream: #fff9f2;
+      --latte: #f1e7dd;
+      --beige: #d9c6b4;
+      --accent: #caa77f;
+      --text: #2b2b2b;
+      --muted: #6b665f;
+      --max-width: 980px;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin:0;
+      color:var(--text);
+      background:linear-gradient(180deg,var(--cream),#fff);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:var(--max-width); margin:0 auto; padding:36px 20px;}
+    header{
+      display:flex; justify-content:space-between; align-items:center; gap:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:14px;
+    }
+    .logo{
+      width:64px; height:64px;
+      background:linear-gradient(135deg,var(--latte),var(--beige));
+      border-radius:12px; display:flex; align-items:center; justify-content:center;
+      font-weight:700; color:var(--text); box-shadow:0 6px 18px rgba(0,0,0,0.06);
+      font-size:20px;
+    }
+    h1{margin:0; font-size:20px; letter-spacing:0.3px}
+    nav a{color:var(--muted); text-decoration:none; margin-left:16px; font-weight:600; font-size:14px}
+    nav a:hover{color:var(--text)}
+
+    /* Hero */
+    .hero{display:grid; grid-template-columns:1fr 360px; gap:28px; align-items:center; padding:44px 0}
+    .hero-left h2{font-size:36px; margin:0 0 12px 0}
+    .tagline{color:var(--muted); margin-bottom:18px}
+    .cta{
+      display:flex; gap:12px; align-items:center;
+    }
+    .btn{
+      background:var(--text); color:white; padding:10px 16px; border-radius:8px; text-decoration:none; font-weight:600;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06)
+    }
+    .subtle-btn{background:transparent; border:1px solid var(--beige); padding:10px 14px; border-radius:8px; color:var(--text); font-weight:600}
+
+    /* Gallery */
+    .gallery{
+      margin-top:10px;
+      display:grid; grid-template-columns:repeat(3,1fr); gap:12px;
+    }
+    .gallery img{width:100%; border-radius:10px; display:block; aspect-ratio:1/1; object-fit:cover; box-shadow:0 8px 20px rgba(0,0,0,0.06)}
+
+    /* Reviews */
+    .section{padding:48px 0; border-top:1px solid rgba(0,0,0,0.03)}
+    .section h3{margin-top:0}
+    .reviews-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:18px}
+    .review-card{
+      background:linear-gradient(180deg,white,var(--latte));
+      border-radius:10px; padding:16px; box-shadow:0 6px 18px rgba(0,0,0,0.04);
+      min-height:110px; display:flex; flex-direction:column; gap:8px;
+    }
+    .review-stars{color:var(--accent); font-weight:700}
+    .review-name{font-weight:600; color:var(--text); font-size:15px}
+    .review-text{color:var(--muted); font-size:14px; margin-top:auto}
+
+    /* Contact */
+    .contact-grid{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
+    .contact-card{background:white; padding:16px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.04)}
+    footer{padding:28px 0; color:var(--muted); border-top:1px solid rgba(0,0,0,0.03); margin-top:18px; text-align:center}
+
+    /* Small screens */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr; }
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      header{flex-direction:column; align-items:flex-start; gap:12px}
+      .logo{width:56px;height:56px}
+    }
+    @media (max-width:520px){
+      .gallery{grid-template-columns:repeat(1,1fr)}
+      .hero-left h2{font-size:28px}
+    }
+    /* little helper */
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">SS</div>
+        <div>
+          <h1>Sugar Saints Cookie Co.</h1>
+          <div class="muted" style="font-size:13px">Small-batch cookies — handcrafted with care</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Hand-crafted cookies, baked between life’s little moments.</h2>
+        <p class="tagline">Hand-crafted by a busy mom, baked with joy in the quiet moments between the chaos.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Get in touch</a>
+          <a class="subtle-btn" href="#gallery">See the cookies</a>
+        </div>
+
+        <div class="section" id="gallery" style="padding-top:26px;">
+          <h3>Our Cookies</h3>
+          <p class="muted">A rotating selection — seasonal flavors and custom designs.</p>
+          <div class="gallery" id="gallery-grid">
+            <!-- Replace these images with your own in /images/ -->
+            <img src="images/cookie1.jpg" alt="Cookie 1">
+            <img src="images/cookie2.jpg" alt="Cookie 2">
+            <img src="images/cookie3.jpg" alt="Cookie 3">
+            <img src="images/cookie4.jpg" alt="Cookie 4">
+            <img src="images/cookie5.jpg" alt="Cookie 5">
+            <img src="images/cookie6.jpg" alt="Cookie 6">
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="contact-card" style="padding:20px;">
+          <h3 style="margin:0 0 8px 0">Order Reviews (Live)</h3>
+          <p class="muted" style="margin:0 0 12px 0">Real reviews appear here automatically when customers submit the review form.</p>
+          <a class="btn" href="#reviews">Read reviews</a>
+          <div style="margin-top:14px;font-size:13px;color:var(--muted)">Follow on Instagram: <a href="https://instagram.com/sugarsaintscookieco" target="_blank" rel="noopener">@sugarsaintscookieco</a></div>
+        </div>
+
+        <div class="contact-card" style="margin-top:16px;">
+          <h4 style="margin:0 0 8px 0">Contact</h4>
+          <div style="font-weight:600">Sugar Saints Cookie Co.</div>
+          <div class="muted" style="font-size:14px; margin-bottom:10px">Email: <a href="mailto:sugar@sugarsaintscookieco.com">sugar@sugarsaintscookieco.com</a></div>
+          <div style="font-size:13px;color:var(--muted)">No online ordering — please contact for availability and pickup info.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="section">
+      <div class="container">
+        <h3>Customer Reviews</h3>
+        <p class="muted">These reviews update automatically when customers submit the review form.</p>
+
+        <div id="reviewsGrid" class="reviews-grid">
+          <!-- JS will populate review cards here -->
+        </div>
+
+        <div style="margin-top:18px">
+          <!-- REVIEW FORM EMBED LINK (opens a new tab) -->
+          <a class="btn" href="#" id="reviewFormBtn" target="_blank">Leave a review</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h3>Contact & Follow</h3>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <strong>Email</strong>
+            <div class="muted">sugar@sugarsaintscookieco.com</div>
+          </div>
+          <div class="contact-card">
+            <strong>Instagram</strong>
+            <div class="muted"><a href="https://instagram.com/sugarsaintscookieco" target="_blank">@sugarsaintscookieco</a></div>
+          </div>
+          <div class="contact-card">
+            <strong>Reviews</strong>
+            <div class="muted">Share feedback via our review form (link below).</div>
+            <div style="margin-top:8px"><a class="subtle-btn" id="reviewFormBtn2" href="#" target="_blank">Leave a review</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>&copy; <span id="year"></span> Sugar Saints Cookie Company — handcrafted with care</div>
+    </footer>
+  </div>
+
+  <script>
+    // ---- CONFIG: Replace these with your actual Google Form link and published CSV link ----
+    const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform"; // https://docs.google.com/forms/d/e/1FAIpQLSfMWbwFlN5S4DLLF9W4RVhtvfMEdaNRiziwsfeSm_mxCSmotQ/viewform?usp=dialog
+    const PUBLISHED_SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/YOUR_SHEET_ID/pub?output=csv"; // https://docs.google.com/spreadsheets/d/e/2PACX-1vRLIN1PjwnLTxNyBkvetxOOqlNpkmuZANvFUteYyeaj7z_MBO8jNeWqToI7CVf0hPyEkJl_IMkhj_DH/pub?gid=242049063&single=true&output=csv
+
+    // Basic fallback reviews (show when no sheet yet)
+    const fallbackReviews = [
+      {name:"Alyssa R.", rating:5, text:"Delicious and absolutely adorable — my kids begged for more!", date:"2025-10-01"},
+      {name:"Maria P.", rating:5, text:"Perfectly baked and beautifully decorated. Highly recommend.", date:"2025-09-23"},
+      {name:"Jen K.", rating:5, text:"I ordered as a gift and everyone loved them. Will reorder!", date:"2025-09-10"}
+    ];
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('reviewFormBtn').href = GOOGLE_FORM_URL;
+    document.getElementById('reviewFormBtn2').href = GOOGLE_FORM_URL;
+
+    // Render review cards
+    function renderReviews(reviews){
+      const grid = document.getElementById('reviewsGrid');
+      grid.innerHTML = "";
+      if(!reviews || reviews.length === 0){ reviews = fallbackReviews }
+      reviews.forEach(r=>{
+        const card = document.createElement('div');
+        card.className = 'review-card';
+        const stars = '★'.repeat(Math.max(0, Math.min(5, Number(r.rating || 5))));
+        card.innerHTML = `<div class="review-stars">${stars}</div>
+                          <div class="review-name">${escapeHtml(r.name || "Anonymous")}</div>
+                          <div class="review-text">${escapeHtml(r.text || "")}</div>
+                          <div style="font-size:12px;color:var(--muted);margin-top:8px">${r.date || ''}</div>`;
+        grid.appendChild(card);
+      });
+    }
+
+    // CSV fetch + parse (simple)
+    async function loadReviewsFromCsv(url){
+      try{
+        const res = await fetch(url);
+        if(!res.ok) throw new Error("Unable to fetch CSV");
+        const text = await res.text();
+        // Assumes columns: Timestamp, Name, Rating, Review, (other columns ok)
+        const lines = text.trim().split('\\n').map(l=>l.replace(/^"|"$/g,''));
+        const headers = lines[0].split(',');
+        const rows = lines.slice(1).map(row=>{
+          // naive CSV split - works for simple published CSV with no commas inside fields
+          const parts = row.split(',');
+          const obj = {};
+          headers.forEach((h,i)=> obj[h.trim()] = (parts[i] || "").trim());
+          return obj;
+        });
+        // Map to expected fields
+        const mapped = rows.map(r=>{
+          return {
+            name: r['Name'] || r['Full Name'] || r['name'] || 'Anonymous',
+            rating: r['Rating'] || r['rating'] || 5,
+            text: r['Review'] || r['Feedback'] || r['Comments'] || '',
+            date: r['Timestamp'] || ''
+          };
+        });
+        return mapped.reverse(); // newest first
+      }catch(err){
+        console.warn("Failed to load reviews CSV:", err);
+        return null;
+      }
+    }
+
+    function escapeHtml(unsafe){
+      return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/\"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    // Try loading the CSV — if not configured, fallback:
+    (async function init(){
+      if(PUBLISHED_SHEET_CSV_URL.includes("YOUR_SHEET_ID")){
+        renderReviews(fallbackReviews);
+        return;
+      }
+      const reviews = await loadReviewsFromCsv(PUBLISHED_SHEET_CSV_URL);
+      if(reviews && reviews.length) renderReviews(reviews);
+      else renderReviews(fallbackReviews);
+    })();
+  </script>
+</body>
+</html>

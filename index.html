@@ -48,6 +48,11 @@
     nav a{color:var(--muted); text-decoration:none; margin-left:16px; font-weight:600; font-size:14px}
     nav a:hover{color:var(--text)}
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+    />
+    
     /* Hero */
     .hero{display:grid; grid-template-columns:1fr 360px; gap:28px; align-items:center; padding:44px 0}
     .hero-left h2{font-size:36px; margin:0 0 12px 0}
@@ -102,6 +107,8 @@
   </style>
 </head>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  
 <body>
   <div class="container">
     <header>
@@ -134,14 +141,24 @@
           <p class="muted">Custom designs made to order.</p>
           <div class="gallery" id="gallery-grid">
             <!-- Replace these images with your own in /images/ -->
-            <a href="Images/Cookie1.JPG" data-lightbox="cookies" data-title="Birthday Set">
+            <a href="Images/Cookie1.JPG" data-lightbox="cookies" data-title="Recent Batches">
               <img src="Images/Cookie1.JPG" alt="Cookie 1" width="300" height="300">
             </a> 
-            <img src="Images/Cookie2.JPG" alt="Cookie 2" width="300" height="300">
-            <img src="Images/Cookie3.JPG" alt="Cookie 3" width="300" height="300">
-            <img src="Images/Cookie4.JPG" alt="Cookie 4" width="300" height="300">
-            <img src="Images/Cookie5.JPG" alt="Cookie 5" width="300" height="300">
-            <img src="Images/Cookie6.JPG" alt="Cookie 6" width="300" height="300">
+           <a href="Images/Cookie2.JPG" data-lightbox="cookies" data-title="Recent Batches">
+              <img src="Images/Cookie2.JPG" alt="Cookie 1" width="300" height="300">
+            </a> 
+           <a href="Images/Cookie3.JPG" data-lightbox="cookies" data-title="Recent Batches">
+              <img src="Images/Cookie3.JPG" alt="Cookie 1" width="300" height="300">
+            </a> 
+           <a href="Images/Cookie4.JPG" data-lightbox="cookies" data-title="Recent Batches">
+              <img src="Images/Cookie4.JPG" alt="Cookie 1" width="300" height="300">
+            </a> 
+            <a href="Images/Cookie5.JPG" data-lightbox="cookies" data-title="Recent Batches">
+              <img src="Images/Cookie5.JPG" alt="Cookie 1" width="300" height="300">
+            </a> 
+            <a href="Images/Cookie6.JPG" data-lightbox="cookies" data-title="Recent Batches">
+              <img src="Images/Cookie6.JPG" alt="Cookie 1" width="300" height="300">
+            </a> 
           </div>
         </div>
       </div>
@@ -294,6 +311,7 @@
   </script>
 </body>
 </html>
+
 
 
 

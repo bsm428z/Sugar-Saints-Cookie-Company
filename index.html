@@ -1,16 +1,17 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sugar Saints Cookie Company — Handcrafted Cookies</title>
   <meta name="description" content="Sugar Saints Cookie Company — Handcrafted cookies by a busy mom. Small-batch, made with care.">
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Lightbox -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" />
+  <!-- Lightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css">
 
   <style>
     :root {
@@ -23,76 +24,114 @@
       --max-width: 980px;
     }
 
-    *, *::before, *::after { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      color: var(--text);
-      background: linear-gradient(180deg, var(--cream), #fff);
-      line-height: 1.45;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+    * {
+      box-sizing: border-box;
     }
 
-    .container { max-width: var(--max-width); margin: 0 auto; padding: 36px 20px; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin: 0;
+      color: var(--text);
+      background: linear-gradient(180deg, var(--cream), #fff);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.45;
+    }
 
-    /* Header */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 36px 20px;
+    }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 16px;
-      flex-wrap: wrap;
     }
+
     .brand {
       display: flex;
       align-items: center;
       gap: 14px;
     }
+
     .logo {
-      width: 64px; height: 64px;
+      width: 64px;
+      height: 64px;
       background: linear-gradient(135deg, var(--latte), var(--beige));
       border-radius: 12px;
-      display: flex; justify-content: center; align-items: center;
-      font-weight: 700; color: var(--text);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: var(--text);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
       font-size: 20px;
     }
-    h1 { margin: 0; font-size: 20px; letter-spacing: 0.3px; }
-    nav a {
-      color: var(--muted); text-decoration: none; margin-left: 16px;
-      font-weight: 600; font-size: 14px;
+
+    h1 {
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0.3px;
     }
-    nav a:hover { color: var(--text); }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 16px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
 
     /* Hero */
     .hero {
       display: grid;
-      grid-template-columns: 2fr 1fr;
+      grid-template-columns: 1fr 480px;
       gap: 28px;
       align-items: center;
       padding: 44px 0;
     }
+
     .hero-left h2 {
       font-size: 36px;
       margin: 0 0 12px 0;
-      white-space: nowrap; /* keeps the headline on one line */
-      overflow: hidden;
-      text-overflow: ellipsis;
+      white-space: nowrap; /* keeps text in one row */
     }
-    .tagline { color: var(--muted); margin-bottom: 18px; }
-    .cta { display: flex; gap: 12px; align-items: center; }
+
+    .tagline {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .cta {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
     .btn {
-      background: var(--text); color: white;
-      padding: 10px 16px; border-radius: 8px;
-      text-decoration: none; font-weight: 600;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      background: var(--text);
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
     }
+
     .subtle-btn {
-      background: transparent; border: 1px solid var(--beige);
-      padding: 10px 14px; border-radius: 8px;
-      color: var(--text); font-weight: 600;
+      background: transparent;
+      border: 1px solid var(--beige);
+      padding: 10px 14px;
+      border-radius: 8px;
+      color: var(--text);
+      font-weight: 600;
     }
 
     /* Gallery */
@@ -102,74 +141,130 @@
       gap: 12px;
       margin-top: 16px;
     }
+
     .gallery img {
       width: 100%;
       display: block;
       border-radius: 10px;
       aspect-ratio: 1/1;
       object-fit: cover;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
       cursor: pointer;
       transition: transform 0.2s ease;
     }
-    .gallery img:hover { transform: scale(1.05); }
 
-    /* Sections */
-    .section { padding: 48px 0; border-top: 1px solid rgba(0,0,0,0.03); }
-    .section h3 { margin-top: 0; }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
 
     /* Reviews */
+    .section {
+      padding: 48px 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .section h3 {
+      margin-top: 0;
+    }
+
     .reviews-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 16px;
       margin-top: 18px;
     }
+
     .review-card {
       background: linear-gradient(180deg, white, var(--latte));
       border-radius: 10px;
       padding: 16px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
       min-height: 110px;
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
-    .review-stars { color: var(--accent); font-weight: 700; }
-    .review-name { font-weight: 600; color: var(--text); font-size: 15px; }
-    .review-text { color: var(--muted); font-size: 14px; margin-top: auto; }
+
+    .review-stars {
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .review-name {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .review-text {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: auto;
+    }
 
     /* Contact */
-    .contact-grid { display: flex; gap: 18px; flex-wrap: wrap; }
+    .contact-grid {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
     .contact-card {
       background: white;
       padding: 16px;
       border-radius: 10px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+      flex: 1 1 220px;
     }
 
     footer {
-      padding: 28px 0; color: var(--muted);
-      border-top: 1px solid rgba(0,0,0,0.03);
+      padding: 28px 0;
+      color: var(--muted);
+      border-top: 1px solid rgba(0, 0, 0, 0.03);
+      margin-top: 18px;
       text-align: center;
     }
 
-    /* Helpers */
-    .muted { color: var(--muted); }
-
-    /* Responsive */
+    /* Small screens */
     @media (max-width: 880px) {
-      .hero { grid-template-columns: 1fr; }
-      header { flex-direction: column; align-items: flex-start; gap: 12px; }
-      .logo { width: 56px; height: 56px; }
-      .gallery { grid-template-columns: repeat(2,1fr); }
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .logo {
+        width: 56px;
+        height: 56px;
+      }
     }
+
     @media (max-width: 520px) {
-      .hero-left h2 { font-size: 28px; white-space: normal; }
-      .gallery { grid-template-columns: 1fr; }
+      .gallery {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .hero-left h2 {
+        font-size: 28px;
+        white-space: normal; /* wrap if too narrow */
+      }
+    }
+
+    .muted {
+      color: var(--muted);
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <!-- Header -->
@@ -181,6 +276,7 @@
           <div class="muted" style="font-size:14px">Small-batch cookies — made with love</div>
         </div>
       </div>
+
       <nav>
         <a href="#gallery">Gallery</a>
         <a href="#reviews">Reviews</a>
@@ -198,31 +294,132 @@
           <a class="subtle-btn" href="#gallery">See the cookies</a>
         </div>
       </div>
-      <div class="contact-card" style="padding:20px;">
-        <h3>Order Reviews (Live)</h3>
-        <p class="muted">Real reviews appear here automatically when customers submit the review form.</p>
-        <a class="btn" href="#reviews">Read reviews</a>
-        <div style="margin-top:14px;font-size:13px;color:var(--muted)">Follow on Instagram: <a href="https://instagram.com/sugarsaintscookieco" target="_blank">@sugarsaintscookieco</a></div>
+      <div>
+        <img src="Images/HeroCookie.jpg" alt="Hero Cookie" style="width:100%; border-radius:12px;">
       </div>
     </section>
 
     <!-- Gallery -->
     <section class="section" id="gallery">
-      <h3>Recent Batches</h3>
-      <p class="muted">Custom designs made to order.</p>
-      <div class="gallery">
-        <a href="Images/Cookie1.JPG" data-lightbox="cookies" data-title="Cookie1"><img src="Images/Cookie1.JPG" alt="Cookie1"></a>
-        <a href="Images/Cookie2.JPG" data-lightbox="cookies" data-title="Cookie2"><img src="Images/Cookie2.JPG" alt="Cookie2"></a>
-        <a href="Images/Cookie3.JPG" data-lightbox="cookies" data-title="Cookie3"><img src="Images/Cookie3.JPG" alt="Cookie3"></a>
-        <a href="Images/Cookie4.JPG" data-lightbox="cookies" data-title="Cookie4"><img src="Images/Cookie4.JPG" alt="Cookie4"></a>
-        <a href="Images/Cookie5.JPG" data-lightbox="cookies" data-title="Cookie5"><img src="Images/Cookie5.JPG" alt="Cookie5"></a>
-        <a href="Images/Cookie6.JPG" data-lightbox="cookies" data-title="Cookie6"><img src="Images/Cookie6.JPG" alt="Cookie6"></a>
+      <div class="container">
+        <h3>Recent Batches</h3>
+        <p class="muted">Custom designs made to order.</p>
+
+        <div class="gallery">
+          <a href="Images/Cookie1.JPG" data-lightbox="cookies"><img src="Images/Cookie1.JPG" alt="Cookie1"></a>
+          <a href="Images/Cookie2.JPG" data-lightbox="cookies"><img src="Images/Cookie2.JPG" alt="Cookie2"></a>
+          <a href="Images/Cookie3.JPG" data-lightbox="cookies"><img src="Images/Cookie3.JPG" alt="Cookie3"></a>
+          <a href="Images/Cookie4.JPG" data-lightbox="cookies"><img src="Images/Cookie4.JPG" alt="Cookie4"></a>
+          <a href="Images/Cookie5.JPG" data-lightbox="cookies"><img src="Images/Cookie5.JPG" alt="Cookie5"></a>
+          <a href="Images/Cookie6.JPG" data-lightbox="cookies"><img src="Images/Cookie6.JPG" alt="Cookie6"></a>
+        </div>
       </div>
     </section>
 
     <!-- Reviews -->
     <section id="reviews" class="section">
-      <h3>Customer Reviews</h3>
-      <p class="muted">These reviews update automatically when customers submit the review form.</p>
-      <div id="reviewsGrid" class="reviews-grid"></div>
-      <div style="margin
+      <div class="container">
+        <h3>Customer Reviews</h3>
+        <p class="muted">These reviews update automatically when customers submit the review form.</p>
+
+        <div id="reviewsGrid" class="reviews-grid"></div>
+
+        <div style="margin-top:18px">
+          <a class="btn" href="#" id="reviewFormBtn" target="_blank">Leave a review</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h3>Contact & Follow</h3>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <strong>Email</strong>
+            <div class="muted">sugar@sugarsaintscookieco.com</div>
+          </div>
+          <div class="contact-card">
+            <strong>Instagram</strong>
+            <div class="muted"><a href="https://instagram.com/sugarsaintscookieco" target="_blank">@sugarsaintscookieco</a></div>
+          </div>
+          <div class="contact-card">
+            <strong>Reviews</strong>
+            <div class="muted">Share feedback via our review form.</div>
+            <div style="margin-top:8px">
+              <a class="subtle-btn" id="reviewFormBtn2" href="#" target="_blank">Leave a review</a>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:20px;">
+          <div class="contact-card">
+            <h4 style="margin:0 0 8px 0">Contact Details</h4>
+            <div style="font-weight:600">Sugar Saints Cookie Co.</div>
+            <div class="muted" style="font-size:14px; margin-bottom:10px">
+              Email: <a href="mailto:sugar@sugarsaintscookieco.com">sugar@sugarsaintscookieco.com</a>
+            </div>
+            <div style="font-size:13px;color:var(--muted)">
+              No online ordering — please contact for availability and pickup info.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div>&copy; <span id="year"></span> Sugar Saints Cookie Company — handcrafted with care</div>
+    </footer>
+  </div>
+
+  <!-- Lightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
+  <script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true,
+      'alwaysShowNavOnTouchDevices': true,
+      'fadeDuration': 200,
+      'imageFadeDuration': 200
+    });
+
+    // Reviews config
+    const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform";
+    const fallbackReviews = [
+      { name: "Alyssa R.", rating: 5, text: "Delicious and adorable — my kids begged for more!", date: "2025-10-01" },
+      { name: "Maria P.", rating: 5, text: "Perfectly baked and beautifully decorated. Highly recommend.", date: "2025-09-23" },
+      { name: "Jen K.", rating: 5, text: "I ordered as a gift and everyone loved them. Will reorder!", date: "2025-09-10" }
+    ];
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('reviewFormBtn').href = GOOGLE_FORM_URL;
+    document.getElementById('reviewFormBtn2').href = GOOGLE_FORM_URL;
+
+    function renderReviews(reviews) {
+      const grid = document.getElementById('reviewsGrid');
+      grid.innerHTML = "";
+      reviews.forEach(r => {
+        const card = document.createElement('div');
+        card.className = 'review-card';
+        const stars = '★'.repeat(Math.max(0, Math.min(5, Number(r.rating || 5))));
+        card.innerHTML = `<div class="review-stars">${stars}</div>
+                          <div class="review-name">${escapeHtml(r.name)}</div>
+                          <div class="review-text">${escapeHtml(r.text)}</div>
+                          <div style="font-size:12px;color:var(--muted);margin-top:8px">${r.date || ''}</div>`;
+        grid.appendChild(card);
+      });
+    }
+
+    function escapeHtml(unsafe) {
+      return unsafe
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/\"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    renderReviews(fallbackReviews);
+  </script>
+</body>
+</html>

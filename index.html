@@ -70,7 +70,7 @@
     /* Gallery */
     .gallery{
       margin-top:10px;
-      display:grid; grid-template-columns:repeat(3,1fr); gap:12px;
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px;
     }
     .gallery img{width:100%; border-radius:10px; display:block; aspect-ratio:1/1; object-fit:cover; box-shadow:0 8px 20px rgba(0,0,0,0.06)}
 
@@ -364,6 +364,7 @@
   </script>
 </body>
 </html>
+
 
 
 

@@ -47,12 +47,7 @@
     h1{margin:0; font-size:20px; letter-spacing:0.3px}
     nav a{color:var(--muted); text-decoration:none; margin-left:16px; font-weight:600; font-size:14px}
     nav a:hover{color:var(--text)}
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
-    />
-    
+   
     /* Hero */
     .hero{display:grid; grid-template-columns:1fr 360px; gap:28px; align-items:center; padding:44px 0}
     .hero-left h2{font-size:36px; margin:0 0 12px 0}
@@ -308,9 +303,16 @@
       if(reviews && reviews.length) renderReviews(reviews);
       else renderReviews(fallbackReviews);
     })();
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
+    />
+        
   </script>
 </body>
 </html>
+
 
 
 

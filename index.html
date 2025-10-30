@@ -109,7 +109,7 @@
   <div class="container">
     <header>
       <div class="brand">
-        <div class="Images/Logo.png"/div>
+        <img src="Images/Logo.png" alt="Sugar Saints Logo" class="logo">
         <div>
           <h1>Sugar Saints Cookie Company</h1>
           <div class="muted" style="font-size:13px">Small-batch cookies — made with love</div>
@@ -304,8 +304,20 @@
       if(reviews && reviews.length) renderReviews(reviews);
       else renderReviews(fallbackReviews);
     })();
-      
+</script>
+
+  <!-- ✅ Load Lightbox after your main script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+  <script>
+    // Optional config for close button + scrolling between photos
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true,
+      'alwaysShowNavOnTouchDevices': true,
+      'fadeDuration': 200,
+      'imageFadeDuration': 200
+    });
+  </script>
 </body>
 </html>
 

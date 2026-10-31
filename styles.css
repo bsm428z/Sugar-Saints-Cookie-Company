@@ -244,30 +244,15 @@ h2 {
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   background: white;
-}
-
-.gallery-item::before {
-  content: '';
-  position: absolute;
-  inset: 0;
   border: 3px solid transparent;
-  border-radius: 20px;
-  background: linear-gradient(135deg, var(--blush), var(--soft-gold)) border-box;
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  pointer-events: none;
+  background-image: linear-gradient(white, white), linear-gradient(135deg, var(--blush), var(--soft-gold));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
 }
 
 .gallery-item:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 20px 40px rgba(201, 123, 123, 0.18);
-}
-
-.gallery-item:hover::before {
-  opacity: 1;
 }
 
 .gallery-item img {

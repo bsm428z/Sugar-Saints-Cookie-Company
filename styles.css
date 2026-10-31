@@ -1,0 +1,364 @@
+/* Sugar Saints Cookie Company — Whimsical Bakery Aesthetic */
+
+:root {
+  --cream: #FDF8F3;
+  --blush: #F4D7D0;
+  --dusty-rose: #C97B7B;
+  --sage: #A8B5A2;
+  --soft-gold: #D4AF7F;
+  --charcoal: #3A3A3A;
+  --text: #4A3F3A;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: var(--cream);
+  color: var(--text);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(253, 248, 243, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  border-bottom: 1px solid rgba(201, 123, 123, 0.15);
+  padding: 0.75rem 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--charcoal);
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.logo img {
+  height: 48px;
+  width: auto;
+  filter: invert(1) brightness(0.2); /* makes the dark logo visible on light bg */
+}
+
+.nav {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: var(--dusty-rose);
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 5rem 0 4rem;
+  background: linear-gradient(180deg, var(--cream) 0%, #F8F0EA 100%);
+}
+
+.hero-logo {
+  height: 140px;
+  margin-bottom: 1.5rem;
+  filter: invert(1) brightness(0.25);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--charcoal);
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--dusty-rose);
+  margin-bottom: 0.5rem;
+}
+
+.location {
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  color: var(--sage);
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--dusty-rose);
+  color: white;
+  box-shadow: 0 4px 15px rgba(201, 123, 123, 0.3);
+}
+
+.btn-primary:hover {
+  background: #B86A6A;
+  transform: translateY(-2px);
+}
+
+/* Sections */
+section {
+  padding: 5rem 0;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  text-align: center;
+  margin-bottom: 0.75rem;
+  color: var(--charcoal);
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.gallery-item {
+  cursor: pointer;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+/* About */
+.about-section {
+  background: #F8F0EA;
+}
+
+.about-content {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.08rem;
+}
+
+.about-content p {
+  margin-bottom: 1.25rem;
+}
+
+/* Order Steps */
+.order-section {
+  background: white;
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.step {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  background: var(--blush);
+  color: var(--dusty-rose);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 auto 1rem;
+}
+
+.step h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.5rem;
+  color: var(--charcoal);
+}
+
+.note {
+  text-align: center;
+  margin-top: 2rem;
+  font-style: italic;
+  color: var(--sage);
+}
+
+/* Contact */
+.contact-section {
+  background: linear-gradient(180deg, #F8F0EA 0%, var(--cream) 100%);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0 2.5rem;
+}
+
+.contact-card {
+  background: white;
+  padding: 1.75rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.contact-card h3 {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 0.5rem;
+  color: var(--dusty-rose);
+}
+
+.contact-card a {
+  color: var(--charcoal);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-card a:hover {
+  color: var(--dusty-rose);
+}
+
+.contact-btn {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+  background: var(--charcoal);
+  color: #E8E0D8;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.footer .small {
+  opacity: 0.7;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 85vh;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  font-weight: 300;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav {
+    display: none; /* simple for now — can add hamburger later */
+  }
+  .hero {
+    padding: 3.5rem 0 3rem;
+  }
+  .hero-logo {
+    height: 110px;
+  }
+  section {
+    padding: 3.5rem 0;
+  }
+  .gallery-item img {
+    height: 220px;
+  }
+}
